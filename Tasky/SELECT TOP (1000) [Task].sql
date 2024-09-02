@@ -1,0 +1,5 @@
+SELECT TOP (1000) [Task]
+      ,[TaskDescription]
+      ,[Completed]
+      ,[Id]
+  FROM [taskd1].[dbo].[TaskProps]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register your account</title>
+    <link rel="stylesheet" href="login.css" >
+</head>
+<body>
+  <input id="email" type="email"placeholder="example1@gmail.com">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="registerAccount()">Register your new account</button>
+  <script>
+    async function registerAccount() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        console.log("Button clicked");
+        try {
+            let response = await fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email, password: password }),
+            });
+
+            if (response.ok) {
+                console.log('Account registered successfully');
+            } else {
+                console.error('Error registering account');
+            }
+        } catch (err) {
+            console.error('Error:', err);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\bin\Debug\Tasky.dacpac
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\bin\Debug\Tasky.dll
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\bin\Debug\Tasky.pdb
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\Tasky.sqlproj.AssemblyReference.cache
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\Model.xml
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\refactor.xml
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\postdeploy.sql
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\predeploy.sql
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\Tasky.dll
+g:\My Drive\javascipt\lessons VS\WEBLAGER\jsIG\taskd1\Tasky\obj\Debug\Tasky.pdb

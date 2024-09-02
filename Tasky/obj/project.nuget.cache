@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hf3YVH+BK2B3YZyi74K39sK/m4g4FF46FCbGjkruBaE+Q4Vj8jab6TEY3nyAISg3sqe4vm8JLzVmg82lLsBgQA==",
+  "success": true,
+  "projectFilePath": "g:\\My Drive\\javascipt\\lessons VS\\WEBLAGER\\jsIG\\taskd1\\Tasky\\Tasky.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Slavi\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\Slavi\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.0\\microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
