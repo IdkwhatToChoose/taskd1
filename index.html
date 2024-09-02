@@ -1,84 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" >
-</head>
-<body>
-    <!-- HTML !-->
-
- <nav>
-    
-    <a href="setts.html">
-        <i class="fa-solid fa-gear" style="color: white;font-size: 17.4px; transform: translate(77.6em,-1.2em);; letter-spacing: 1px;"> Settings</i>
-    </a>
-    <image src="logoTAKSY.png" class="logo" style="border-radius: 50%;" height="70px" width="70px"></image>
-    <button class="button-89" onclick="RegisterWindow()" role="button">Login</button>
-    <div class="icon-container">
-        <image src="themes (1dark).png" title="theme icons" class="icon" height="37px" width="37px"></image>
-        <image src="themes (1light).png" title="theme icons" class="icon" height="37px" width="37px"></image>
-    </div>
-    <!-- <img src="https://media.tenor.com/K3j9pwWlME0AAAAj/fire-flame.gif"> -->
-    <div class="mainWindow" id="mainWindow" style="display: none;">
-        <div>
-            <p>Enter email:</p>
-            <input type="email">
-        </div>
-       <div>
-        <p>Enter password:</p>
-        <input type="password">
-       </div>
-       <p>if you dont have an account <a href="register.html">register here</a></p>
-       
-    </div>
-  
- </nav>
- <div id="overlay"></div>
- <table class="AddTask">
-    <thead>
-        <tr class="head">
-            <th>Task</th>
-            <th>Task Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="insAT">
-            <td><input class="inpsT" type="text"></td>
-            <td><input class="inpsT" type="text"></td>
-            <td><button>Enter</button></td>
-        </tr>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+     <nav>
+        <img src="logoTAKSY.png" class="logo" alt="Logo">
+         
         
-    </tbody>
- </table>
- <table class="listOfTasks">
-    <thead>
-        <tr class="head">
-            <th>Task</th>
-            <th>Task Description</th>
-            <th>Task Completed</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="ins">
-            <td><input class="inpsT" type="text"></td>
-            <td><input class="inpsT" type="text"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr class="ins">
-            <td><input class="inpsT" type="text"></td>
-            <td><input class="inpsT" type="text"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr class="ins">
-            <td><input class="inpsT" type="text"></td>
-            <td><input class="inpsT" type="text"></td>
-            <td><input type="checkbox"></td>
-        </tr>
-    </tbody>
- </table>
- <script src="https://kit.fontawesome.com/eaaba1c9b5.js" crossorigin="anonymous"></script>
- <script src="code.js"></script>
-</body>
-</html>
+         
+        
+         <button class="button-89" onclick="RegisterWindow()" role="button">Login</button>
+         <a href="setts.html" class="settings">
+            <i class="fa-solid fa-gear"></i> SETTINGS
+        </a>
+     </nav>
+     <div class="mainWindow" id="mainWindow">
+         <div>
+             <p>Enter email:</p>
+             <input type="email">
+         </div>
+         <div>
+             <p>Enter password:</p>
+             <input type="password">
+         </div>
+         <p>If you don't have an account, <a href="/registration/register.html">register here</a></p>
+     </div>
+     <div id="overlay"></div>
+     <table class="AddTask">
+         <thead>
+             <tr class="head">
+                 <th>Task</th>
+                 <th>Task Description</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr class="insAT">
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input class="inpsT" type="text"></td>
+                 <td><button>Enter</button></td>
+             </tr>
+         </tbody>
+     </table>
+     <table class="listOfTasks">
+         <thead>
+             <tr class="head">
+                 <th>Task</th>
+                 <th>Task Description</th>
+                 <th>Task Completed</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr class="ins">
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input type="checkbox"></td>
+             </tr>
+             <tr class="ins">
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input type="checkbox"></td>
+             </tr>
+             <tr class="ins">
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input class="inpsT" type="text"></td>
+                 <td><input type="checkbox"></td>
+             </tr>
+         </tbody>
+     </table>
+     <script src="https://kit.fontawesome.com/eaaba1c9b5.js" crossorigin="anonymous"></script>
+     <script src="code.js"></script>
+ </body>
+ </html>
+ 
