@@ -1,0 +1,356 @@
+/*  
+
+ .button-89 {
+    --b: 2px;   
+    --s: .45em; 
+    --color: #000000;
+ transform: translate(65.6em,-1.4em);
+    
+    padding: calc(.54em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .2s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #ededed00;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-89:hover,
+  .button-89:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+   
+  }
+  
+  .button-89:active {
+    background: var(--color);
+    color: #ffc9c9;
+   
+  }
+  nav{
+    height: 5em;
+    width: 100%;
+    background: linear-gradient(to top, #786464, #f62727);
+    border-radius: 7px;
+    box-shadow: black;
+  }
+  nav *{
+    display: inline;
+  }
+ 
+ 
+
+ 
+
+#mainWindow {
+  display: none; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: rgb(32, 31, 31);
+  opacity: 98%;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 15px rgba(19, 18, 18, 0.2);
+  z-index: 1000; 
+}
+#overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500; a
+}
+.mainWindow div{
+display: block;
+margin-top: 30px;
+font-size: larger;
+color: #ffcdcd;
+
+}
+.mainWindow div p{
+  margin-right: 27px;
+}
+.mainWindow a:last-child{
+  margin-top: 20px;
+  color: rgba(19, 239, 255, 0.678);
+}
+.mainWindow div input{
+  border-radius: 5px;
+  box-shadow: #f62727;
+  outline-color: #b5f6ff;
+  outline-offset: 2px;
+  opacity: 90%;
+}
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  transform: scale(1.5);
+  margin-left: 17px;
+}
+.icon-container {
+  display: inline-block;
+ max-width:160px;
+  cursor: pointer;
+  padding: 3vh;
+  transform: translateX(-20px);
+ 
+}
+
+.icon {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  border-radius: 50%; 
+  margin-bottom: 9px;
+  margin-left: 16px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  image-resolution: 4000px;
+}
+.logo{
+  margin-left: -50px;
+}
+table{
+  padding: 17px;
+  border: #000000 solid 2px;
+  border-radius: 12px;
+  margin-top: 20vh;
+  margin-left: 30%;
+  background-color: linear-gradient(to left );
+}
+
+.insAT *,.ins *{
+ padding: 10px;
+}
+.AddTask{
+  margin-top: 100px;
+}
+.insAT input{
+  border-radius: 15px;
+  outline-offset: 2px;
+  outline-color: rgb(247, 119, 119);
+  background: linear-gradient(to right, #7cff82, #86f1ff);
+  opacity: 90%;
+color: #000000;
+font-size: 16px;
+  letter-spacing: 1.3px;
+}
+
+.listOfTasks tr td:last-child{
+  border: #000000 1px solid;
+  border-radius: 10px;
+  width: 20px;
+  background-color: #fff6f2;
+  transition: ease-in-out background-color 0.6s;
+}
+.listOfTasks tr td:last-child:hover{
+background-color: #40ff86;
+
+}
+.ins input{
+  border-radius: 15px;
+  outline-offset: 1px;
+  outline-color: rgb(247, 119, 119);
+  background: linear-gradient(to right, #ffcaca, #cdceff);
+  opacity: 90%;
+color: #000000;
+font-size: 16px;
+  transition: outline-offset 0.25s;
+  letter-spacing: 1.3px;
+}
+.ins input:hover{
+outline-offset: 5px;
+} 
+
+ 
+
+ */
+/* ---------------------------------------------------------- -----------------------------------------------------------*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background: linear-gradient(to top, #786464, #f62727);
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+    nav a.settings {
+        color: white;
+        font-size: 1.6em;
+        text-decoration: none;
+        font-family: cursive;
+    }
+
+    nav .logo {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+
+.button-89 {
+    padding: 0.52em 1em;
+    color: #000000;
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1em;
+}
+
+    .button-89:hover {
+        background-color: #000000;
+        color: white;
+    }
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .icon:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+#mainWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgb(32, 31, 31);
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 15px rgba(19, 18, 18, 0.2);
+    z-index: 1000;
+    color: white;
+}
+
+.mainWindow div {
+    margin-top: 20px;
+}
+
+.mainWindow a {
+    color: rgba(19, 239, 255, 0.678);
+}
+
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+    table th, table td {
+        padding: 13px;
+        text-align: center;
+    }
+
+.AddTask, .listOfTasks {
+    margin-top: 30px;
+}
+
+.insAT input, .ins input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    outline-color: rgb(247, 119, 119);
+    background: linear-gradient(to right, #ffcaca, #cdceff);
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.ins input {
+    outline-color: rgb(0, 0, 0);
+    outline-width: 125px;
+}
+
+.listOfTasks tr td:last-child {
+    text-align: center;
+    background-color: #fff6f2;
+    transition: background-color 0.6s ease-in-out;
+    width: 4rem;
+}
+
+    .listOfTasks tr td:last-child:hover {
+        background-color: #40ff86;
+    }
+
+input[type="checkbox"] {
+    transform: scale(1.6);
+    width: 22px;
+    height: 22px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-89 {
+        margin-top: 10px;
+    }
+
+    .icon-container {
+        justify-content: flex-start;
+        padding: 0;
+        transform: none;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-89, .icon {
+        font-size: 0.8em;
+        padding: 0.4em 0.8em;
+    }
+
+    .icon-container {
+        gap: 5px;
+    }
+}

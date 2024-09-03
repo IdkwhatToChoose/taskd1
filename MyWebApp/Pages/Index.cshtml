@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img src="logoTAKSY.png" class="logo" alt="Logo">
+
+
+
+
+        <button class="button-89" onclick="RegisterWindow()" role="button">Login</button>
+        <a href="setts.html" class="settings">
+            <i class="fa-solid fa-gear"></i> SETTINGS
+        </a>
+    </nav>
+    <div class="mainWindow" id="mainWindow">
+        <div>
+            <p>Enter email:</p>
+            <input type="email">
+        </div>
+        <div>
+            <p>Enter password:</p>
+            <input type="password">
+        </div>
+        <p>If you don't have an account, <a href="/registration/register.html">register here</a></p>
+    </div>
+    <div id="overlay"></div>
+    <table class="AddTask">
+        <thead>
+            <tr class="head">
+                <th>Task</th>
+                <th>Task Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="insAT">
+                <td><input class="inpsT" type="text"></td>
+                <td><input class="inpsT" type="text"></td>
+                <td><button>Enter</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="listOfTasks">
+        <thead>
+            <tr class="head">
+                <th>Task</th>
+                <th>Task Description</th>
+                <th>Task Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="ins">
+                <td><input class="inpsT" type="text"></td>
+                <td><input class="inpsT" type="text"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="ins">
+                <td><input class="inpsT" type="text"></td>
+                <td><input class="inpsT" type="text"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="ins">
+                <td><input class="inpsT" type="text"></td>
+                <td><input class="inpsT" type="text"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://kit.fontawesome.com/eaaba1c9b5.js" crossorigin="anonymous"></script>
+    <script src="code.js"></script>
+</body>
+</html>
+
