@@ -1,0 +1,18 @@
+﻿@model TaskyApp.ViewModels.RegistrationViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register your account</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form asp-controller="Home" asp-action="RegistrationAdd" method="post">
+        <input id="email" type="email" placeholder="example1@gmail.com" asp-for="Email">
+        <input id="password" type="password" placeholder="Password" asp-for="Password">
+        <button>Register your new account</button>
+    </form>
+    
+</body>
+</html>
