@@ -1,0 +1,12 @@
+﻿@model TaskyApp.ViewModels.TaskPropViewModel
+
+<form asp-controller="Task" asp-action="NewTask" method="post">
+    <input asp-for="@Model.Task"/>
+    <input asp-for="@Model.TaskDescription"/>
+    <input asp-for="@Model.Completed" hidden value="incompleted"/>
+    <button>CLixk</button>
+</form>
+
+<style>
+
+</style>

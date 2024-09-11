@@ -1,0 +1,61 @@
+﻿@model TaskyApp.ViewModels.RegistrationViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <nav>
+        <img src="/assets/log" class="logo" alt="Logo">
+
+
+
+        @if (ViewBag.IsLogin == false)
+        {
+            <button class="button-89 logtools" role="button"><a href="@Url.Action("Login","Home")">Login</a></button>
+        }
+        else if (ViewBag.IsLogin == true)
+        {
+            <a href="@Url.Action("Index","Home" ,new {isLoginI=true})">
+                <i class="fa-solid fa-right-from-bracket logtools" style="position:relative;right:30px;margin-left:-20%;"></i>
+            </a>
+
+        }
+
+        <a href="setts.html" class="settings">
+            <i class="fa-solid fa-gear"></i> SETTINGS
+        </a>
+       
+
+    </nav>
+    <div class="overlayTheme"></div>
+
+    <form asp-action="LoginAccount" asp-controller="Home" method="get">
+
+
+        <div class="mainWindow" id="mainWindow">
+            <i class="fa-solid fa-xmark"  style="margin-left:96.7%;cursor:pointer"></i>
+            <div>
+                <p>Enter email:</p>
+                <input type="email" asp-for="Email">
+            </div>
+            <div>
+                <p>Enter password:</p>
+                <input type="password" asp-for="Password">
+            </div>
+            <button>Login</button>
+            <p>If you don't have an account, <a href="@Url.Action("Registration","Home")">register here</a></p>
+        </div>
+
+    </form>
+
+   <style>
+       
+   </style>
+    <script src="https://kit.fontawesome.com/eaaba1c9b5.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,5 +1,4 @@
-﻿
-
+﻿@model List<TaskyApp.ViewModels.TaskPropViewModel>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,43 +9,36 @@
 </head>
 <body>
     <nav>
-        <img src="logoTAKSY.png" class="logo" alt="Logo">
+        <img src="/assets/log" class="logo" alt="Logo">
 
 
 
+        @if (ViewBag.IsLogin == false)
+        {
+            <button class="button-89 logtools" role="button"><a href="@Url.Action("Login","Home")">Login</a></button>
+        }
+        else if(ViewBag.IsLogin==true)
+        {
+            <a href="@Url.Action("Index","Home" ,new {isLoginI=false})">
+                <i class="fa-solid fa-right-from-bracket logtools" style="position:relative;right:30px;margin-left:-20%;"></i>
+            </a>
+          <a href="@Url.Action("NewTask","Task")">
+                <i class="fa-solid fa-plus" style="border:1px solid black;padding:5px;border-radius:50%;"></i>
+          </a>
+            
 
-        <button class="button-89" onclick="RegisterWindow()" role="button">Login</button>
+        }
+        
         <a href="setts.html" class="settings">
             <i class="fa-solid fa-gear"></i> SETTINGS
         </a>
+       
+       
     </nav>
-    <div class="mainWindow" id="mainWindow">
-        <div>
-            <p>Enter email:</p>
-            <input type="email">
-        </div>
-        <div>
-            <p>Enter password:</p>
-            <input type="password">
-        </div>
-        <p>If you don't have an account, <a href="@Url.Action("Registration","Home")">register here</a></p>
-    </div>
-    <div id="overlay"></div>
-    <table class="AddTask">
-        <thead>
-            <tr class="head">
-                <th>Task</th>
-                <th>Task Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="insAT">
-                <td><input class="inpsT" type="text"></td>
-                <td><input class="inpsT" type="text"></td>
-                <td><button>Enter</button></td>
-            </tr>
-        </tbody>
-    </table>
+   
+    
+   
+   
     <table class="listOfTasks">
         <thead>
             <tr class="head">
@@ -61,18 +53,19 @@
                 <td><input class="inpsT" type="text"></td>
                 <td><input type="checkbox"></td>
             </tr>
-            <tr class="ins">
-                <td><input class="inpsT" type="text"></td>
-                <td><input class="inpsT" type="text"></td>
-                <td><input type="checkbox"></td>
-            </tr>
-            <tr class="ins">
-                <td><input class="inpsT" type="text"></td>
-                <td><input class="inpsT" type="text"></td>
-                <td><input type="checkbox"></td>
-            </tr>
+            @foreach(var task in Model)
+            {
+                <tr class="ins">
+                    <td><input class="inpsT" type="text" value="@task.Task" readonly></td>
+                    <td><input class="inpsT" type="text" value="@task.TaskDescription" readonly></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            }
         </tbody>
     </table>
+    <style>
+        
+    </style>
     <script src="https://kit.fontawesome.com/eaaba1c9b5.js" crossorigin="anonymous"></script>
     <script src="/js/site.js"></script>
 </body>
