@@ -289,7 +289,7 @@ nav {
     #mainWindow input {
         width: 59%;
         height: 2.45em;
-        border-radius: 8px;
+        border-radius: 7px;
         background-color: whitesmoke;
         outline: solid;
         outline-width: 3px;
@@ -304,6 +304,67 @@ nav {
         outline-color: black;
         
  }
+
+
+#loginBtn {
+    align-items: center;
+    background-color: lightpink;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 17px;
+    height: 43px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding: 14px;
+    position: relative;
+    left: 70%;
+    top: -20%;
+}
+
+    #loginBtn:after {
+        background-color:rgb(255, 239, 0);
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 40px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(7.7px, 7.7px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+
+#loginBtn:hover:after {
+    transform: translate(0, 0);
+}
+
+#loginBtn:active {
+    background-color:blueviolet;
+    outline: 0;
+}
+
+#loginBtn:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    #loginBtn {
+        padding: 0 40px;
+    }
+}
 .mainWindow div {
     margin-top: 20px;
     font-size: 21px;
