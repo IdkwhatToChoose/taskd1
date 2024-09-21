@@ -1,12 +1,53 @@
 ﻿@model TaskyApp.ViewModels.TaskPropViewModel
 
-<form asp-controller="Task" asp-action="NewTask" method="post">
-    <input asp-for="@Model.Task"/>
-    <input asp-for="@Model.TaskDescription"/>
-    <input asp-for="@Model.Completed" hidden value="incompleted"/>
-    <button>CLixk</button>
-</form>
+<div id="window">
+    <form asp-controller="Task" asp-action="NewTask" method="post">
+        <input asp-for="@Model.Task" />
+        <input asp-for="@Model.TaskDescription" />
+        <input asp-for="@Model.Completed" hidden value="incompleted" />
+        <button>New Task</button>
+    </form>
+    <p id="date">@DateTime.Now.ToString("dd.MM.yyyy")</p>
+    <p id="hour">@DateTime.Now.ToString("HH:mm")</p>
+</div>
+
 
 <style>
+    #window{
+        position:absolute;
+        margin-left:30%;
+       margin-right:30%;
+       top:23%;
+        width:40%;
+        height:30%;
+        background-color:lightblue;
+        background-blend-mode:darken;
+        border:solid blue 3px;
+        border-radius:5px;
+    }
+    #window form{
+        padding:auto;
 
+    }
+    #hour,#date{
+        font-family:monospace;
+        letter-spacing:0.23vh;
+        position:relative;
+        left:37%;
+        font-size:1.3em;
+        top:30%;
+        width:21vh;
+        text-align:center;
+        background-color: #5af7ffba;
+    }
+    #window *{
+        padding:4px;
+        border-radius:1px;
+
+    }
+    #window input{
+        width:30vh;
+        margin-top:30px;     
+        margin-left:10px;
+    }
 </style>

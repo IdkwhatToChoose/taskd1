@@ -14,8 +14,9 @@ namespace TaskyApp.Helps
             {
                 Id = estate.Id,
                 Task = estate.Task,
-                TaskDescription = estate.TaskDescription
-               
+                TaskDescription = estate.TaskDescription,
+                DateOfCreation = estate.DateOfCreation,
+               HourOfCreation = estate.HourOfCreation
             };
             return viewModel;
         }

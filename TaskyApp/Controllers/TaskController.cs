@@ -17,7 +17,8 @@ namespace TaskyApp.Controllers
             taskProp2.Task=taskProp.Task;
             taskProp2.TaskDescription=taskProp.TaskDescription;
             taskProp2.Completed=taskProp.Completed;
-            
+            taskProp2.DateOfCreation=DateTime.Now.ToString("dd.MM.yyyy");
+            taskProp2.HourOfCreation = DateTime.Now.ToString("HH:mm");
             db.TaskProps.Add(taskProp2);
             db.SaveChanges();
             return RedirectToAction("Index", "Home", new {isLoginI=true});

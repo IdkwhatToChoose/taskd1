@@ -410,7 +410,9 @@ table {
     width: 100%;
     padding: 10px;
     border-radius: 15px;
-    outline-color: rgb(247, 119, 119);
+    outline-color:aqua;
+    letter-spacing:2.3px;
+    font-weight:lighter;
     background: linear-gradient(to right, #ffcaca, #cdceff);
     border: 1px solid #ccc;
     font-size: 16px;

@@ -10,6 +10,4 @@ public partial class RegisteredAccount
     public string? Email { get; set; }
 
     public string? Password { get; set; }
-
-   
 }

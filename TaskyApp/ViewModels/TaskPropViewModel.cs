@@ -9,5 +9,9 @@
         public string Completed { get; set; } = null!;
 
         public int Id { get; set; }
+
+        public string? DateOfCreation { get; set; }
+
+        public string? HourOfCreation { get; set; }
     }
 }
