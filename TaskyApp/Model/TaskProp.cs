@@ -16,4 +16,6 @@ public partial class TaskProp
     public string? DateOfCreation { get; set; }
 
     public string? HourOfCreation { get; set; }
+
+    public int? CreatedById { get; set; }
 }

@@ -16,12 +16,12 @@ namespace TaskyApp.Controllers
         {
             taskMapper = _clMapper;
         }
-        public IActionResult Index(bool isLoginI)
+        public IActionResult Index(int creatorID)
         {
-            ViewBag.IsLogin = isLoginI;
-            List<TaskProp> taskProp = db.TaskProps.ToList();
+            ViewBag.CreatorID = creatorID;
+            List<TaskProp> taskProp = db.TaskProps.Where(x=>x.CreatedById==creatorID).ToList();
             List<TaskPropViewModel> taskPropViews = taskMapper.ListClientToListEstateVm(taskProp);
-
+           
             return View(taskPropViews);
         }
         public IActionResult Registration()
@@ -51,9 +51,9 @@ namespace TaskyApp.Controllers
             if (BCrypt.Net.BCrypt.Verify(textPass, rvm.Password) == true)
             {
                 isLogin = true;
-                return RedirectToAction("Index", "Home", new {isLoginI=isLogin});
+                return RedirectToAction("Index", "Home", new { creatorID = account.Id });
             }
-            return RedirectToAction("Index", "Home", new { isLoginI = isLogin });
+            return RedirectToAction("Index", "Home", new { creatorID = 0 });
             
         }
        

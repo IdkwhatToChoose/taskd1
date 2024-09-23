@@ -6,8 +6,9 @@ namespace TaskyApp.Controllers
     public class TaskController : Controller
     {
         private Taskd1Context db=new Taskd1Context();
-        public IActionResult NewTask()
+        public IActionResult NewTask(int creatorID)
         {
+            ViewBag.CreatorID = creatorID;
             return View("/Views/Tasks/NewTask.cshtml");
         }
         [HttpPost]
@@ -19,9 +20,10 @@ namespace TaskyApp.Controllers
             taskProp2.Completed=taskProp.Completed;
             taskProp2.DateOfCreation=DateTime.Now.ToString("dd.MM.yyyy");
             taskProp2.HourOfCreation = DateTime.Now.ToString("HH:mm");
+            taskProp2.CreatedById=taskProp.CreatedById;
             db.TaskProps.Add(taskProp2);
             db.SaveChanges();
-            return RedirectToAction("Index", "Home", new {isLoginI=true});
+            return RedirectToAction("Index", "Home", new {creatorID=taskProp.CreatedById});
         }
     }
 }

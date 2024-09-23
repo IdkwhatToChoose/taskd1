@@ -5,6 +5,7 @@
         <input asp-for="@Model.Task" />
         <input asp-for="@Model.TaskDescription" />
         <input asp-for="@Model.Completed" hidden value="incompleted" />
+        <input asp-for="@Model.CreatedById" hidden value="@ViewBag.CreatorID" />
         <button>New Task</button>
     </form>
     <p id="date">@DateTime.Now.ToString("dd.MM.yyyy")</p>

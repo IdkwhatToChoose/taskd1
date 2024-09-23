@@ -44,6 +44,7 @@ public partial class Taskd1Context : DbContext
             entity.Property(e => e.Completed)
                 .HasMaxLength(40)
                 .IsUnicode(false);
+            entity.Property(e => e.CreatedById).HasColumnName("CreatedByID");
             entity.Property(e => e.DateOfCreation)
                 .HasMaxLength(50)
                 .IsUnicode(false);

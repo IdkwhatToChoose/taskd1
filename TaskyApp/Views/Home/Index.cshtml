@@ -15,16 +15,16 @@
 
 
 
-        @if (ViewBag.IsLogin == false)
+        @if (ViewBag.CreatorID <= 0)
         {
             <button class="button-89 logtools" role="button"><a href="@Url.Action("Login","Home")">Login</a></button>
         }
-        else if(ViewBag.IsLogin==true)
+        else if (ViewBag.CreatorID >= 0)
         {
-            <a href="@Url.Action("Index","Home" ,new {isLoginI=false})">
+            <a href="@Url.Action("Index","Home" ,new {creatorID=0})">
                 <i class="fa-solid fa-right-from-bracket logtools" style="position:relative;right:30px;margin-left:-20%;"></i>
             </a>
-          <a href="@Url.Action("NewTask","Task")">
+            <a href="@Url.Action("NewTask","Task",new{creatorID=ViewBag.CreatorID})">
                 <i class="fa-solid fa-plus" style="border:1px solid black;padding:5px;border-radius:50%;"></i>
           </a>
           
@@ -52,7 +52,7 @@
                 </tr>
             </thead>
             <tbody>
-            @if (ViewBag.IsLogin == true)
+            @if (ViewBag.CreatorID > 0)
             {
                 @foreach (var task in Model)
                 {
